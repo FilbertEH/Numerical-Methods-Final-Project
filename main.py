@@ -51,7 +51,7 @@ def deNoise(img, pepper=5, salt=250):
  
     return denoised
 
-#PSNR algorithm to compare original and processed image
+#PSNR algorithm to compare noisy and restored image
 def PSNR(original, denoised):
     mse = np.mean((original - denoised) ** 2)
     if mse == 0:

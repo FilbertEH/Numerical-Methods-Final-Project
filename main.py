@@ -11,8 +11,8 @@ def addNoise(img, prob=0.05):
     noise = img.copy()
     rand = np.random.default_rng(1)
     map = rand.random(img.shape)
-    noise[map < prob / 2] = 0
-    noise[map > 1 - prob / 2] = 255
+    noise[map < prob] = 0
+    noise[map > 1 - prob] = 255
     return noise
 
 #quadratic interpolation (newton polynomial)

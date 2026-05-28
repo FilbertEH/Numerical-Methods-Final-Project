@@ -4,7 +4,7 @@ Final project for Numerical Methods. The goal is to take an image, add Salt and 
 
 ## What it does
 
-1. Loads a grayscale image
+1. Loads an image (grayscaled)
 2. Adds Salt and Pepper noise to it (randomly sets some pixels to black or white)
 3. Detects the noisy pixels and replaces them using Quadratic Interpolation
 4. Compares the noisy and restored image using PSNR to measure how well it worked

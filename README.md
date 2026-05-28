@@ -54,10 +54,6 @@ The terminal will also print the PSNR values before and after denoising.
 - numpy
 - pillow
 
-## Notes
-
-The image gets resized to 256x256 before processing to keep the runtime short. If you want to use the original resolution just remove the .resize part in loadImage().
-
 ## References
 
 - Salt and Pepper Noise — https://www.geeksforgeeks.org/electronics-engineering/difference-between-salt-noise-and-pepper-noise/

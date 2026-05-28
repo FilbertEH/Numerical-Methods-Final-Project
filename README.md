@@ -36,7 +36,7 @@ pip install numpy pillow
 ```
 3. Run the script
 ```
-python denoise.py
+python main.py
 ```
 
 ## Output

@@ -1,6 +1,6 @@
 # Image Denoising using Quadratic Interpolation
 
-This is my final project for Numerical Methods. The goal is to take an image, add Salt and Pepper noise to it, and then remove the noise using Newton's Quadratic Interpolation.
+Final project for Numerical Methods. The goal is to take an image, add Salt and Pepper noise to it, and then remove the noise using Newton's Quadratic Interpolation.
 
 ## What it does
 

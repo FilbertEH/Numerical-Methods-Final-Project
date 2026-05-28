@@ -7,12 +7,12 @@ def loadImage():
     return np.array(img, dtype=np.float64)
 
 #add salt and pepper noise
-def addNoise(img, prob=0.05):
+def addNoise(img, prob = 0.05):
     noise = img.copy()
     rand = np.random.default_rng(1)
     map = rand.random(img.shape)
-    noise[map < prob / 2] = 0
-    noise[map > 1 - prob / 2] = 255
+    noise[map < prob] = 0
+    noise[map > 1 - prob] = 255
     return noise
 
 #quadratic interpolation (newton polynomial)
@@ -25,7 +25,7 @@ def quadInterp(x0, y0, x1, y1, x2, y2, x):
     return a*(x - x1)*(x - x0) + b*(x - x0) + c
 
 #removes noise
-def deNoise(img, pepper=5, salt=250):
+def deNoise(img, pepper = 0, salt = 255):
     denoised = img.copy()
     rows, cols = img.shape
 
@@ -55,7 +55,7 @@ def deNoise(img, pepper=5, salt=250):
 def PSNR(original, denoised):
     mse = np.mean((original - denoised) ** 2)
     if mse == 0:
-        return float('inf')
+        return 100
     psnr = 20 * np.log10(255 / np.sqrt(mse))
     return psnr
 
@@ -73,8 +73,8 @@ def main():
     noisy = addNoise(original)
     restored = deNoise(noisy)
 
-    psnrNoisy = PSNR(original, noisy)       #how damaged the image is
-    psnrRestored = PSNR(original, restored) #how well the denoising worked
+    psnrNoisy = PSNR(original, noisy)       
+    psnrRestored = PSNR(original, restored) 
 
     print("PSNR Noisy    :", psnrNoisy, "dB")
     print("PSNR Restored :", psnrRestored, "dB")

@@ -43,8 +43,8 @@ python denoise.py
 
 After running, the folder will have:
 
-- noisy.png — the image with noise added
-- restored.png — the image after denoising
+- noisy.png     : the image with noise added
+- restored.png  : the image after denoising
 
 The terminal will also print the PSNR values before and after denoising.
 

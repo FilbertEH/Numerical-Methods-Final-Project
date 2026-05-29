@@ -7,7 +7,7 @@ def loadImage():
     return np.array(img, dtype=np.float64)
 
 #add salt and pepper noise
-def addNoise(img, prob = 0.05):
+def addNoise(img, prob = 0.01):
     noise = img.copy()
     rand = np.random.default_rng(1)
     map = rand.random(img.shape)

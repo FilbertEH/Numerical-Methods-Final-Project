@@ -1,6 +1,6 @@
 # Image Denoising using Quadratic Interpolation
 
-This is my final project for Numerical Methods. The goal is to take an image, add Salt and Pepper noise to it, and then remove the noise using Newton's Quadratic Interpolation.
+Final project for Numerical Methods. The goal is to take an image, add Salt and Pepper noise to it, and then remove the noise using Newton's Quadratic Interpolation.
 
 ## What it does
 
@@ -53,10 +53,6 @@ The terminal will also print the PSNR values before and after denoising.
 - Python 3
 - numpy
 - pillow
-
-## Notes
-
-The image gets resized to 256x256 before processing to keep the runtime short. If you want to use the original resolution just remove the .resize part in loadImage().
 
 ## References
 
